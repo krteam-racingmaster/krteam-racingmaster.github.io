@@ -129,38 +129,39 @@
     }
   }
 
-  /* ========== 手機版超小螢幕RWD（螢幕寬度小於430px） ========== */
-  @media (max-width: 430px) {
-    nav a {
-      font-size: 14px;
-      margin: 0 8px;
-    }
-
-    header {
-      padding: 20px 15px;
-    }
-
-    .intro-box {
-      max-width: 50%;
-      padding: 30px;
-      border-width: 2px;
-    }
-
-    .intro-box h1 {
-      font-size: 30px;
-    }
-
-    .intro-box p {
-      font-size: 16px;
-      line-height: 1.5;
-    }
-
-    #bg-music {
-      width: 180px;
-      top: 80px;
-      right: 10px;
-    }
+@media (max-width: 430px) {
+  nav a {
+    font-size: 14px;
+    margin: 0 8px;
   }
+
+  header {
+    padding: 20px 15px;
+    height: auto;
+    min-height: 100vh; /* 保證至少滿版高度 */
+  }
+
+  .intro-box {
+    max-width: 90%; /* 手機要接近滿版，90%最好 */
+    padding: 20px;
+    border-width: 2px;
+  }
+
+  .intro-box h1 {
+    font-size: 26px;
+  }
+
+  .intro-box p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  #bg-music {
+    width: 150px; /* 再小一點 */
+    top: 80px;
+    right: 10px;
+  }
+}
 
 </style>
 </head>
