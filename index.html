@@ -81,7 +81,18 @@
     z-index: 20;
   }
 
-  /* ========== 手機版自適應 (螢幕寬度小於768px) ========== */
+  /* ======== logo回首頁設定 ======== */
+  .logo {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 20;
+  }
+  .logo img {
+    height: 60px;
+  }
+
+  /* ========== 平板版RWD（螢幕寬度小於768px） ========== */
   @media (max-width: 768px) {
     nav a {
       font-size: 16px;
@@ -103,7 +114,7 @@
     }
 
     .intro-box h1 {
-      font-size: 36px;
+      font-size: 40px;
     }
 
     .intro-box p {
@@ -112,8 +123,41 @@
     }
 
     #bg-music {
-      width: 200px;
+      width: 220px;
       top: 70px;
+      right: 10px;
+    }
+  }
+
+  /* ========== 手機版超小螢幕RWD（螢幕寬度小於430px） ========== */
+  @media (max-width: 430px) {
+    nav a {
+      font-size: 14px;
+      margin: 0 8px;
+    }
+
+    header {
+      padding: 20px 15px;
+    }
+
+    .intro-box {
+      max-width: 95%;
+      padding: 15px;
+      border-width: 2px;
+    }
+
+    .intro-box h1 {
+      font-size: 32px;
+    }
+
+    .intro-box p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    #bg-music {
+      width: 180px;
+      top: 80px;
       right: 10px;
     }
   }
@@ -122,8 +166,13 @@
 </head>
 <body>
 
-  <!-- 🔥 音樂播放器，含進度條 -->
+  <!-- 🔥 音樂播放器 -->
   <audio id="bg-music" src="assets/bk.mp3" loop controls></audio>
+
+  <!-- 🔥 LOGO點回首頁 -->
+  <a href="index.html" class="logo">
+    <img src="assets/kr-logo.png" alt="KR TEAM Logo">
+  </a>
 
   <nav>
     <a href="index.html">首頁</a>
