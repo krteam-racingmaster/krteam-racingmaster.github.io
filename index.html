@@ -18,11 +18,18 @@
     to { opacity: 1; transform: translateY(0); }
   }
 
+  /* ======== 煙霧漂移動畫 ======== */
+  @keyframes smokeMove {
+    0% { transform: translate(0px, 0px) scale(1); }
+    50% { transform: translate(20px, -10px) scale(1.02); }
+    100% { transform: translate(0px, 0px) scale(1); }
+  }
+
   body { margin: 0; font-family: "Noto Sans TC", Arial, sans-serif; background: #000; color: #fff; }
   nav { background: #111; padding: 10px; text-align: center; position: fixed; width: 100%; top: 0; z-index: 10; }
   nav a { color: #ffc107; margin: 0 15px; text-decoration: none; font-weight: bold; font-size: 18px; }
 
-  /* ======== header（背景）設定含高級動畫 ======== */
+  /* ======== header（背景＋煙霧）設定含動畫 ======== */
   header {
     position: relative;
     height: 100vh;
@@ -37,9 +44,24 @@
     /* 高級背景動畫 */
     opacity: 0;
     animation: bgZoomFade 2.5s ease-out forwards;
+    overflow: hidden; /* 防止煙霧飄出去 */
   }
 
-  /* ======== intro-box（文字框）設定含高級動畫 ======== */
+  /* ======== 煙霧層 ======== */
+  .smoke {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('assets/Smoke.png') no-repeat center center;
+    background-size: cover;
+    opacity: 0.2; /* 煙霧濃度 */
+    animation: smokeMove 30s linear infinite;
+    z-index: 1;
+  }
+
+  /* ======== intro-box（文字框）設定 ======== */
   .intro-box {
     background: rgba(0, 0, 0, 0.8);
     border: 4px solid #ffc107;
@@ -48,6 +70,8 @@
     border-radius: 12px;
     max-width: 420px;
     text-align: left;
+    position: relative;
+    z-index: 2;
 
     /* 高級文字框動畫 */
     opacity: 0;
@@ -81,6 +105,8 @@
   </nav>
 
   <header>
+    <div class="smoke"></div> <!-- ✨ 新增煙霧層 -->
+
     <div class="intro-box">
       <h1>KR TEAM</h1>
       <p>KR源為KartRider的縮寫，由一群熱愛賽車的頂尖玩家所創立。我們集結了對競速有著無限熱情的玩家，以團結、技術與速度為信仰，持續突破極限，挑戰每一場最速傳說。</p>
