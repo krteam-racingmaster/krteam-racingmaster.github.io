@@ -75,6 +75,34 @@
 </style>
 </head>
 <body>
+
+  <!-- 🔥 新增：音樂播放器+播放按鈕 -->
+  <audio id="bg-music" src="assets/bk.mp3" loop></audio>
+
+  <button id="play-music-btn" style="
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #ffc107;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 20;
+  ">播放音樂</button>
+
+  <script>
+    const playBtn = document.getElementById('play-music-btn');
+    const bgMusic = document.getElementById('bg-music');
+
+    playBtn.addEventListener('click', () => {
+      bgMusic.play();
+      playBtn.style.display = 'none'; // 點完隱藏按鈕
+    });
+  </script>
+  <!-- 🔥 音樂播放器區塊結束 -->
+
   <nav>
     <a href="index.html">首頁</a>
     <a href="about.html">最新資訊</a>
