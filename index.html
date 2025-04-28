@@ -6,10 +6,10 @@
   <title>KR丶TEAM 官方網站</title>
 <style>
 
-  /* ======== 背景慢放大動畫 ======== */
-  @keyframes bgZoomFade {
-    from { opacity: 0; transform: scale(1.0); }
-    to { opacity: 1; transform: scale(1); }
+  /* ======== 背景單純淡入動畫 ======== */
+  @keyframes bgFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
   }
 
   /* ======== intro-box 浮現動畫 ======== */
@@ -22,7 +22,7 @@
   nav { background: #111; padding: 10px; text-align: center; position: fixed; width: 100%; top: 0; z-index: 10; }
   nav a { color: #ffc107; margin: 0 15px; text-decoration: none; font-weight: bold; font-size: 18px; }
 
-  /* ======== header（背景慢放）設定 ======== */
+  /* ======== header（背景淡入）設定 ======== */
   header {
     position: relative;
     height: 100vh;
@@ -34,9 +34,9 @@
     box-sizing: border-box;
     text-align: left;
 
-    /* 背景慢放大動畫 */
+    /* 背景單純淡入動畫 */
     opacity: 0;
-    animation: bgZoomFade 2.5s ease-out forwards;
+    animation: bgFadeIn 2s ease-out forwards;
     overflow: hidden;
   }
 
