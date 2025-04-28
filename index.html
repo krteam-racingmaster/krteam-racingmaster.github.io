@@ -77,7 +77,13 @@
 <body>
 
   <!-- 🔥 新增：音樂播放器+播放按鈕 -->
-  <audio id="bg-music" src="assets/bk.mp3" loop></audio>
+ <audio id="bg-music" src="assets/bk.mp3" loop controls style="
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 250px;
+  z-index: 20;
+"></audio>
 
   <button id="play-music-btn" style="
     position: fixed;
