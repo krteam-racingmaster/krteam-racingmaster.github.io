@@ -5,37 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KR丶TEAM 官方網站</title>
   <style>
-    body { margin: 0; font-family: "Noto Sans TC", Arial, sans-serif; background: #000; color: #fff; }
-    nav { background: #111; padding: 10px; text-align: center; position: fixed; width: 100%; top: 0; z-index: 10; }
-    nav a { color: #f90; margin: 0 15px; text-decoration: none; font-weight: bold; font-size: 18px; }
+    body { margin: 0; font-family: "Orbitron", "Noto Sans TC", Arial, sans-serif; background: #000; color: #fff; }
+    nav { background: #0a0a0a; padding: 10px; text-align: center; position: fixed; width: 100%; top: 0; z-index: 10; box-shadow: 0 2px 10px rgba(0,255,255,0.3); }
+    nav a { color: #0ff; margin: 0 15px; text-decoration: none; font-weight: bold; font-size: 18px; text-shadow: 0 0 8px #0ff; }
     header {
       position: relative;
       height: 100vh;
       background: url('assets/cover.png') no-repeat center center/cover;
       display: flex;
       justify-content: flex-end;
-      align-items: center;
-      padding: 200px 100px;
+      align-items: flex-end;
+      padding: 80px 50px;
       box-sizing: border-box;
-      text-align: left;
+      text-align: right;
     }
     .intro-box {
-      background: rgba(0, 0, 0, 0.6);
-      padding: 20px 20px;
-      border-radius: 10px;
-      max-width: 300px;
+      background: rgba(0, 0, 0, 0.7);
+      border: 2px solid #0ff;
+      box-shadow: 0 0 20px #0ff;
+      padding: 20px 30px;
+      border-radius: 12px;
+      max-width: 500px;
     }
     .intro-box h1 {
-      font-size: 30px;
+      font-size: 52px;
       margin-bottom: 15px;
-      color: #f90;
-      text-shadow: 2px 2px 8px #000;
+      color: #0ff;
+      text-shadow: 0 0 10px #0ff;
     }
     .intro-box p {
       font-size: 20px;
       line-height: 1.8;
-      text-shadow: 1px 1px 6px #000;
+      text-shadow: 0 0 6px #0ff;
     }
+    /* 引入Orbitron字型 */
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
   </style>
 </head>
 <body>
@@ -50,10 +54,9 @@
   <header>
     <div class="intro-box">
       <h1>KR丶TEAM</h1>
-      <p>象徵KartRider的精神，由一群熱愛賽車的頂尖玩家所創立。我們集結了對極速有著無限熱情的競速好手，以團結、技術與速度為信仰，持續突破極限，挑戰每一場最速傳說。</p>
+      <p>象徵KartRider的精神，由一群熱愛賽車的頂尖玩家所創立。我們集結了對極速有著無限熱情的競速好手，以團結、技術與速度為信仰，持續突破極限，挑戰每一場最速傳說。在賽道上，我們以榮耀為名，以勝利為志，燃燒輪胎，征戰無盡賽道，只為證明——我們是最強的存在！</p>
     </div>
   </header>
 
 </body>
 </html>
-
