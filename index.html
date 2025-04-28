@@ -107,32 +107,40 @@
 
   /* ========== 平板版RWD（小於768px） ========== */
   @media (max-width: 768px) {
-    nav a {
-      font-size: 16px;
-      margin: 0 10px;
-    }
-
-    .intro-box {
-      max-width: 90%;
-      padding: 20px;
-      border-width: 3px;
-    }
-
-    .intro-box h1 {
-      font-size: 40px;
-    }
-
-    .intro-box p {
-      font-size: 18px;
-      line-height: 1.6;
-    }
-
-    #bg-music {
-      width: 180px;
-      top: 70px;
-      right: 10px;
-    }
+  nav a {
+    font-size: 16px;
+    margin: 0 10px;
   }
+
+  header {
+    padding: 120px 20px 50px 20px; /* 上方留多一點空間，避免壓到Logo */
+    justify-content: center; /* 🔥 手機版改回置中 */
+    align-items: flex-start; /* 🔥 靠上，但因為padding多，看起來像是下方 */
+    text-align: center;
+  }
+
+  .intro-box {
+    max-width: 90%;
+    padding: 20px;
+    margin-top: 300px; /* 🔥 intro-box下推，避開背景KR Logo */
+    border-width: 3px;
+  }
+
+  .intro-box h1 {
+    font-size: 32px;
+  }
+
+  .intro-box p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  #bg-music {
+    width: 180px;
+    top: 70px;
+    right: 10px;
+  }
+}
 
   /* ========== 手機版超小螢幕RWD（小於430px） ========== */
   @media (max-width: 430px) {
