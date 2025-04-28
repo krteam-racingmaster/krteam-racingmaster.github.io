@@ -3,10 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KR丶TEAM - 頁面名稱</title>
+  <title>KR丶TEAM 最新資訊</title>
+<style>
+
+  body { margin: 0; font-family: "Noto Sans TC", Arial, sans-serif; background: #000; color: #fff; }
+  nav { background: #111; padding: 10px; text-align: center; position: fixed; width: 100%; top: 0; z-index: 10; }
+  nav a { color: #ffc107; margin: 0 15px; text-decoration: none; font-weight: bold; font-size: 18px; }
+
+  main {
+    padding: 100px 20px 40px 20px;
+    max-width: 800px;
+    margin: auto;
+    text-align: left;
+  }
+
+  h1 {
+    color: #ffc107;
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .news-item {
+    background: rgba(255, 193, 7, 0.1);
+    border-left: 4px solid #ffc107;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+  }
+
+  .news-date {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 5px;
+  }
+
+  .news-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  /* 手機版調整 */
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 28px;
+    }
+    .news-title {
+      font-size: 18px;
+    }
+    main {
+      padding: 80px 15px 30px 15px;
+    }
+  }
+
+</style>
 </head>
-<body style="background: #000; color: #fff; text-align: center; padding: 50px;">
-  <h1>這裡是 頁面名稱</h1>
-  <p>內文即將更新，敬請期待！</p>
+<body>
+
+  <nav>
+    <a href="index.html">首頁</a>
+    <a href="about.html">最新資訊</a>
+    <a href="members.html">隊員名單</a>
+    <a href="recruit.html">招生資訊</a>
+    <a href="contact.html">聯絡我們</a>
+  </nav>
+
+  <main>
+    <h1>KR TEAM 最新資訊</h1>
+
+    <div class="news-item">
+      <div class="news-date">2025/04/23</div>
+      <div class="news-title">KR TEAM 共20位進入突圍階段！</div>
+    </div>
+
+    <div class="news-item">
+      <div class="news-date">2025/04/10</div>
+      <div class="news-title">KR TEAM 共8位進入晉級階段！</div>
+    </div>
+
+    <div class="news-item">
+      <div class="news-date">2025/04/10</div>
+      <div class="news-title">KR TEAM 車隊網頁發布！</div>
+    </div>
+
+  </main>
+
 </body>
 </html>
