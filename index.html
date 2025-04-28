@@ -72,66 +72,58 @@
     color: #fff;
   }
 
-@media (max-width: 768px) {
-
-  nav a {
-    font-size: 16px;
-    margin: 0 10px;
-  }
-
-  header {
-    padding: 30px 20px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-position: center center;
-  }
-
-  .intro-box {
-    max-width: 90%;
-    padding: 20px;
-    border-width: 3px;
-  }
-
-  .intro-box h1 {
-    font-size: 36px;
-  }
-
-  .intro-box p {
-    font-size: 18px;
-    line-height: 1.6;
-  }
-
+  /* ======== 音樂播放器設定 ======== */
   #bg-music {
-    width: 200px;
-    top: 70px;
-    right: 10px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 250px;
+    z-index: 20;
   }
-}
+
+  /* ========== 手機版自適應 (螢幕寬度小於768px) ========== */
+  @media (max-width: 768px) {
+    nav a {
+      font-size: 16px;
+      margin: 0 10px;
+    }
+
+    header {
+      padding: 30px 20px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-position: center center;
+    }
+
+    .intro-box {
+      max-width: 90%;
+      padding: 20px;
+      border-width: 3px;
+    }
+
+    .intro-box h1 {
+      font-size: 36px;
+    }
+
+    .intro-box p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    #bg-music {
+      width: 200px;
+      top: 70px;
+      right: 10px;
+    }
+  }
+
 </style>
-  
 </head>
 <body>
 
-  <!-- 🔥 新增：音樂播放器+播放按鈕 -->
- <audio id="bg-music" src="assets/bk.mp3" loop controls style="
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  width: 250px;
-  z-index: 20;
-"></audio>
-
-  <script>
-    const playBtn = document.getElementById('play-music-btn');
-    const bgMusic = document.getElementById('bg-music');
-
-    playBtn.addEventListener('click', () => {
-      bgMusic.play();
-      playBtn.style.display = 'none'; // 點完隱藏按鈕
-    });
-  </script>
-  <!-- 🔥 音樂播放器區塊結束 -->
+  <!-- 🔥 音樂播放器，含進度條 -->
+  <audio id="bg-music" src="assets/bk.mp3" loop controls></audio>
 
   <nav>
     <a href="index.html">首頁</a>
